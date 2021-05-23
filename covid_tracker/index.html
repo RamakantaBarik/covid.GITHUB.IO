@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Covid tracker
+    </title>
+    <link rel="shortcut icon" href="./static/images/favicon.jpg" type="image/jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./static/css/grid.css">
+    <link rel="stylesheet" href="./static/css/app.css">
+    <style>
+        li {
+            margin-left: 20px;
+        }
+        .fa {
+            color: white;
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+            .fa:hover {
+                color: red;
+                opacity: 0.7;
+            }
+        .copy-right {
+            color: #fff500;
+        }
+
+    </style>
+</head>
+
+<body class="loading">
+
+    <!-- top nav -->
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="" class="logo">
+                    COVID TRACKER
+                </a>
+                <div class="darkmode-switch" id="darkmode-switch">
+                    <span>
+                        <i class="bx bxs-moon"></i>
+                        <i class="bx bxs-sun"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end top nav -->
+    <!-- main content -->
+    <div class="content">
+        <div class="container">
+            <!-- country select -->
+            <div class="row">
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="box">
+                        <div class="country-select" id="country-select">
+                            <div class="country-select-toggle" id="country-select-toggle">
+                                <span>
+                                    Global
+                                </span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <div class="country-select-list" id="country-select-list">
+                                <input type="text" placeholder="Search country name">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end country select -->
+            <!-- tracking information -->
+            <div class="row">
+                <!-- left content -->
+                <div class="col-8 col-md-12 col-sm-12">
+                    <div class="row">
+                        <!-- counter -->
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="count count-confirmed">
+                                    <div class="count-icon">
+                                        <i class="bx bxs-virus"></i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 id="confirmed-total">123,456,789</h5>
+                                        <span>confirmed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- counter -->
+                        <!-- counter -->
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="count count-recovered">
+                                    <div class="count-icon">
+                                        <i class="bx bxs-smile"></i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 id="recovered-total">123,456,789</h5>
+                                        <span>recovered</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- counter -->
+                        <!-- counter -->
+                        <div class="col-4 col-md-4 col-sm-12">
+                            <div class="box box-hover">
+                                <div class="count count-death">
+                                    <div class="count-icon">
+                                        <i class="bx bxs-sad"></i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 id="death-total">123,456,789</h5>
+                                        <span>deaths</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- counter -->
+                        <!-- embed video -->
+                        <div class="col-6 col-md-6 col-sm-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    what is covid-19
+                                </div>
+                                <div class="box-body">
+                                    <p>
+                                        Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+
+                                    </p>
+                                    <p>
+                                        Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.
+
+
+                                    </p>
+                                    <p>
+                                        The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.
+
+                                    </p>
+                                    <p>
+                                        The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end embed video -->
+                        <!-- embed video -->
+                        <div class="col-6 col-md-6 col-sm-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    how to protect yourself
+                                </div>
+                                <div class="box-body">
+                                    <p>
+                                        To prevent infection and to slow transmission of COVID-19, do the following:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.
+                                        </li>
+                                        <li>
+                                            Maintain at least 1 metre distance between you and people coughing or sneezing.
+                                        </li>
+                                        <li>
+                                            Avoid touching your face.
+                                        </li>
+                                        <li>
+                                            Cover your mouth and nose when coughing or sneezing.
+                                        </li>
+                                        <li>
+                                            Stay home if you feel unwell.
+                                        </li>
+                                        <li>
+                                            Refrain from smoking and other activities that weaken the lungs.
+                                        </li>
+                                        <li>
+                                            Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.
+                                            <br>
+
+                                        </li>
+                                        <br>
+                                        <br>
+                                        <br>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end embed video -->
+                        <div class="col-6 col-md-6 col-sm-12" style="
+    width: 100%;
+">
+                            <div class="box">
+                                <div class="box-header">
+                                    Symptoms
+                                </div>
+                                <div class="box-body">
+                                    <p>COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.</p>
+                                    <p>Most common symptoms:</p>
+                                    <ul>
+                                        <li>fever.</li>
+                                        <li>dry cough.</li>
+                                        <li>tiredness.</li>
+                                    </ul>
+                                    <p>Less common symptoms:</p>
+                                    <ul>
+                                        <li>aches and pains.</li>
+                                        <li>sore throat.</li>
+                                        <li>diarrhoea.</li>
+                                        <li>conjunctivitis.</li>
+                                        <li>headache.</li>
+                                        <li>loss of taste or smell.</li>
+                                        <li>a rash on skin, or discolouration of fingers or toes.</li>
+                                    </ul>
+                                    <p>Serious symptoms:</p>
+                                    <ul>
+                                        <li>difficulty breathing or shortness of breath.</li>
+                                        <li>chest pain or pressure.</li>
+                                        <li>loss of speech or movement.</li>
+                                    </ul>
+                                    <p>Seek immediate medical attention if you have serious symptoms.&nbsp; Always call before visiting your doctor or health facility.&nbsp;</p>
+                                    <p>People with mild symptoms who are otherwise healthy should manage their symptoms at home.&nbsp;</p>
+                                    <p>On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <br /><br />
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- all time chart -->
+                        <div class="col-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    all times
+                                </div>
+                                <div class="box-body">
+                                    <div id="all-time-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end all time chart -->
+
+                    </div>
+                </div>
+                <!-- end left content -->
+                <!-- right content -->
+                <div class="col-4 col-md-12 col-sm-12">
+
+                    <!-- recovery rate chart -->
+                    <div class="box">
+                        <div class="box-header">
+                            recovery rate
+                        </div>
+                        <div class="box-body">
+                            <div id="recover-rate-chart"></div>
+                        </div>
+                    </div>
+                    <!-- end recovery rate chart -->
+                    <!-- 30 days chart -->
+                    <div class="box">
+                        <div class="box-header">
+                            last 30 days
+                        </div>
+                        <div class="box-body">
+                            <div id="days-chart"></div>
+                        </div>
+                    </div>
+                    <!-- end 30 days chart -->
+                    <!-- top country affected -->
+                    <div class="box" style="
+    margin-top: -12px;
+">
+                        <div class="box-header">
+                            top countries affected
+                        </div>
+                        <div class="box-body">
+                            <table class="table-countries" id="table-countries">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Country
+                                        </th>
+                                        <th>Confirmed</th>
+                                        <th>Recovered</th>
+                                        <th>Deaths</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- end top country affected -->
+                </div>
+                <!-- end right content -->
+            </div>
+            <!-- end tracking information -->
+        </div>
+    </div>
+    <!-- end main content -->
+    <!-- footer -->
+    <div class="footer">
+
+
+        <div class="col-sm-4 col-md-4">
+            <p class="copy-right">SOURCE -: WHO</p>
+            <p class="copy-right">SOURCE -: covid19api.com</p>
+
+            <p class="copy-right">© RAMAKANTA BARIK</p>
+
+        </div>
+
+
+
+        <div class=col-4 col-md-12 col-sm-12">
+            <div class="bottom-footer-menu for-social">
+                <a href="https://twitter.com/RamakantaBarik4"><i class="fa fa-twitter" data-toggle="tooltip" data-placement="top" title="" data-original-title="twitter"></i></a>
+                <a href="https://www.facebook.com/ramakanta.barik1/"><i class="fa fa-facebook" data-toggle="tooltip" data-placement="top" title="" data-original-title="facebook"></i></a>
+                <a href="linkedin.com/in/ramakanta-barik-9925711ab
+"><i class="fa fa-linkedin" data-toggle="tooltip" data-placement="top" title="" data-original-title="facebook"></i></a>
+                <a href="https://www.instagram.com/k_a_r_t_h_i_k_4_/"><i class="fa fa-instagram" data-toggle="tooltip" data-placement="top" title="" data-original-title="facebook"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- end footer -->
+    <!-- loader -->
+    <div class="loader">
+        <i class="bx bxs-virus bx-spin"></i>
+    </div>
+    <!-- end loader -->
+    <!-- apexchart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- JS -->
+    <script src="./static/js/fetchApi.js"></script>
+    <script src="./static/js/covidApi.js"></script>
+    <script src="./static/js/app.js"></script>
+    <script src="./static/js/jquery-2.1.4.min.js"></script>
+    <script src="./static/js/jquery.plugins_new.js"></script>
+
+
+    <script>
+       
+        // f12 and right click off
+        $(document).keydown(function (event) {
+            if (event.keyCode == 123) { // Prevent F12
+                return false;
+            } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I
+                return false;
+            }
+        });
+
+        $(document).on("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
